@@ -6,7 +6,7 @@
     treeNode.tree({
         autoEscape: false,
         closedIcon: '&#x21e2;',
-        data: [{"label":"bbop-rest-response","id":"module:bbop-rest-response","children":[{"label":"<a href=\"module-bbop-rest-response.response.html\">response</a>","id":"module:bbop-rest-response.response","children":[]}]},{"label":"<a href=\"module-bbop-rest-response..html\">bbop-rest-response.</a>","id":"module:bbop-rest-response.","children":[]}],
+        data: [{"label":"<a href=\"module-bbop-rest-response.html\">bbop-rest-response</a>","id":"module:bbop-rest-response","children":[{"label":"<a href=\"module-bbop-rest-response-response.html\">response</a>","id":"module:bbop-rest-response~response","children":[]}]}],
         openedIcon: ' &#x21e3;',
         saveState: true,
         useContextMenu: false

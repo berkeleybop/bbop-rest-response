@@ -27,19 +27,28 @@
             <h1><div class="symbol-detail-labels"><span class="label label-kind">module</span></div><small></small><span class="symbol-name">bbop-rest-response</span></h1>
             <p class="source-link">Source: <a href="response.js.html">response.<wbr>js</a></p>
             <div class="symbol-description">
-              <p>Generic BBOP handler for dealing with the gross parsing of responses from a REST server. This is just an example pass-thru handler that needs to be overridden (see subclasses).</p>
+              <p>This module contains two response handlers.</p>
+              <p>First, a generic BBOP handler for dealing with the gross parsing of responses from a REST server. This is just an example pass-thru handler that needs to be overridden (see subclasses).</p>
+              <p>Second, a generic BBOP handler for dealing with the gross parsing of responses from a REST JSON server. It will detect if the incoming response is a string, and if so, try to parse it to JSON. Otherwise, if the raw return is already an Object,
+                we assume that somebody got to it before us (e.g. jQuery's handling).</p>
+              <p>A little more discussion of the base class.</p>
               <p>You may note that things like status and status codes are not part of the base response. The reason is is that not all methods of REST in the environments that we use support them. For example: readURL in rhino. For this reason, the &quot;health&quot;
                 of the response is left to the simple okay() function--just enought to be able to choose between &quot;success&quot; and &quot;failure&quot; in the managers. To give a bit more information in case of early error, there is message and message_type.
               </p>
               <p>Similarly, there are no toeholds in the returned data except raw(). All data views and operations are implemented in the subclasses.
               </p>
+              <p>This module includes the following objects:</p>
+              <ul>
+                <li>base: essentially uninteresting base class</li>
+                <li>json: json parsing attmpted</li>
+              </ul>
             </div>
             <dl class="dl-compact">
             </dl>
           </header>
           <section id="summary">
             <div class="summary-callout">
-              <h2 class="summary-callout-heading">Child class</h2>
+              <h2 class="summary-callout-heading">Child classes</h2>
               <div class="summary-content">
                 <div class="summary-column">
                   <dl class="dl-summary-callout">
@@ -49,6 +58,11 @@
                   </dl>
                 </div>
                 <div class="summary-column">
+                  <dl class="dl-summary-callout">
+                    <dt><a href="module-bbop-rest-response-response_json.html">response_json(json_data)</a></dt>
+                    <dd>
+                    </dd>
+                  </dl>
                 </div>
                 <div class="summary-column">
                 </div>
@@ -56,9 +70,10 @@
             </div>
           </section>
           <section>
-            <h2>Class</h2>
+            <h2>Classes</h2>
             <section id='members-links'>
               <h3><a href="module-bbop-rest-response-response.html">response</a></h3>
+              <h3><a href="module-bbop-rest-response-response_json.html">response_json</a></h3>
             </section>
           </section>
         </div>

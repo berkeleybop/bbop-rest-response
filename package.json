@@ -27,8 +27,8 @@
         "npm": ">= 2.7.4"
     },
     "dependencies": {
-        "bbop-core": "0.0.4",
-        "bbop-registry": "0.0.2",
+        "bbop-core": "0.0.5",
+        "bbop-registry": "0.0.3",
         "underscore": "1.8.3"
     },
     "devDependencies": {
